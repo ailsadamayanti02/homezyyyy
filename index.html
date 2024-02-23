@@ -7,36 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Link to Syne font -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
     <!-- Link to Hanken Grotesk font -->
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/icon.svg">
     <title>Homezy</title>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var menuIcon = document.querySelector(".navbar__icon");
             var overlay = document.querySelector(".navbar__overlay");
             var closeIcon = document.querySelector(".navbar__close");
             var navbar = document.querySelector(".navbar");
-    
+
             menuIcon.addEventListener("click", function () {
                 overlay.classList.toggle("active");
                 navbar.classList.toggle("active"); // Menambahkan kelas active pada navbar saat overlay aktif
                 menuIcon.style.display = "none";
                 closeIcon.style.display = "block";
             });
-    
+
             closeIcon.addEventListener("click", function () {
                 overlay.classList.toggle("active");
                 navbar.classList.toggle("active"); // Menghapus kelas active pada navbar saat overlay tidak aktif
                 closeIcon.style.display = "none";
                 menuIcon.style.display = "block";
             });
-    
+
             window.addEventListener("resize", function () {
                 if (window.innerWidth > 768) {
                     overlay.classList.remove("active");
@@ -47,7 +48,7 @@
             });
         });
     </script>
-    
+
 </head>
 
 <body>
@@ -234,7 +235,7 @@
                                             </div>
                                             <a href="#" class="w-inline-block">
                                                 <div class="body-lb">Edwin Martins</div>
-                                                <div>Property Advisor</div>
+                                                <div class="body-ll">Property Advisor</div>
                                             </a>
                                         </div>
                                         <a href="#" class="w-inline-block">
@@ -364,7 +365,7 @@
 
                 <div class="features__grid-property">
                     <a href="#" class="box-ratio-1-2 box-ratio-2-3 w-inline-block">
-                        <img src="img/homefea.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
+                        <img src="img/hm2.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
                     </a>
                     <div class="features__card2">
                         <div class="features__label2">
@@ -376,14 +377,14 @@
                         </div>
                         <div class="features__grid-detail">
                             <div class="features__price">
-                                <h4>$15,000</h4>
+                                <h4>$4,299</h4>
                                 <div>/month</div>
                             </div>
                             <a href="#" class=" w-inline-block">
-                                <h5>Beach Pros Realty Inc.</h5>
+                                <h5>Beacon Homes LLC</h5>
                             </a>
                             <div class="features__description">
-                                <div>37 Ambleside Gardens, Ilford, IG4 5HH</div>
+                                <div>3 Leame Close, Hull, HU3 6ND</div>
                             </div>
                         </div>
                         <div class="features__facilities2">
@@ -401,7 +402,7 @@
                                     <img src="img/bath2-icon.svg" alt="home1">
                                 </div>
                                 <div class="features__facility-text">
-                                    <div class="body-sm">3</div>
+                                    <div class="body-sm">2</div>
                                     <div class="body-sm"> Baths</div>
                                 </div>
                             </div>
@@ -410,7 +411,7 @@
                                     <img src="img/surface-area-icon.svg" alt="home1">
                                 </div>
                                 <div class="features__facility-text">
-                                    <div class="body-sm">5x7 m2</div>
+                                    <div class="body-sm">7x7 m2</div>
                                 </div>
                             </div>
                         </div>
@@ -421,7 +422,7 @@
 
                 <div class="features__grid-property">
                     <a href="#" class="box-ratio-1-2 box-ratio-2-3 w-inline-block">
-                        <img src="img/homefea.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
+                        <img src="img/hm3.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
                     </a>
                     <div class="features__card2">
                         <div class="features__label2">
@@ -433,14 +434,14 @@
                         </div>
                         <div class="features__grid-detail">
                             <div class="features__price">
-                                <h4>$15,000</h4>
+                                <h4>$5,099</h4>
                                 <div>/month</div>
                             </div>
                             <a href="#" class=" w-inline-block">
-                                <h5>Beach Pros Realty Inc.</h5>
+                                <h5>Herringbone Realty</h5>
                             </a>
                             <div class="features__description">
-                                <div>37 Ambleside Gardens, Ilford, IG4 5HH</div>
+                                <div>28B Highgate Road, London, NWS 1NS</div>
                             </div>
                         </div>
                         <div class="features__facilities2">
@@ -458,7 +459,7 @@
                                     <img src="img/bath2-icon.svg" alt="home1">
                                 </div>
                                 <div class="features__facility-text">
-                                    <div class="body-sm">3</div>
+                                    <div class="body-sm">2</div>
                                     <div class="body-sm"> Baths</div>
                                 </div>
                             </div>
@@ -513,7 +514,7 @@
                         <div class="benefit__card">
                             <div class="benefit__icon">
                                 <div class="svg__icon--48 w-embed">
-                                    <img src="img/jempol-icon.svg" alt="coin">
+                                    <img src="img/like-shapes.svg" alt="coin">
                                 </div>
                             </div>
                             <h5>Clear Legality</h5>
@@ -610,10 +611,10 @@
                         </div>
                         <div>
                             <a href="#" class="w-inline-block">
-                                <h5>Studio</h5>
+                                <h5>Office</h5>
                             </a>
                             <div class="categories__description">
-                                <div class="text-l card-category-name">100+ listings</div>
+                                <div class="body-l card-category-name">100+ listings</div>
                             </div>
                         </div>
                     </div>
@@ -874,7 +875,7 @@
                 <div class="agent__card">
                     <div>
                         <a href="#" class="agent__name w-inline-block">
-                            <h5>Albert Flores</h5>
+                            <h5>Kathryn Murphy</h5>
                         </a>
                         <div class="agent__description">
                             <div class="body-l">Property Advisor</div>
@@ -903,7 +904,7 @@
                         </div>
                     </div>
                     <a href="#" class="agent__photo w-inline-block">
-                        <img src="img/orang6.svg" alt="call icon" class="image__full-cover">
+                        <img src="img/orang5.svg" alt="call icon" class="image__full-cover">
                     </a>
                 </div>
 
@@ -986,7 +987,7 @@
                                     <h5>Brooklyn Simmons</h5>
 
                                     <div class="testi__description">
-                                        <div class="body-l">
+                                        <div class="body-l ">
                                             CEO of Asana
                                         </div>
                                     </div>
@@ -1060,19 +1061,17 @@
                         </div>
                     </div>
                     <div class="cta__form">
-                        <div class="w-form">
-                            <form>
-                                <div class="cta__form-button">
-                                    <input class="text-field cta__form-button--has w-input" type="email"
-                                        name="Email-Addres" placeholder="Enter Your Email Addres" required>
-                                    <div class="cta__button">
-                                        <input type="submit" class="cta__button-btn w-button" value="Subscribe">
-                                    </div>
+                        <form>
+                            <div class="cta__form-button">
+                                <input class="text-field cta__form-button--has w-input" type="email" name="Email-Addres"
+                                    placeholder="Enter Your Email Address" required>
+                                <div class="cta__button">
+                                    <input type="submit" class="cta__button-btn w-button" value="Subscribe">
                                 </div>
-                            </form>
-                            <div class="cta__bg">
-                                <img src="img/bg-lagi.svg" alt="Background" class="cta__image">
                             </div>
+                        </form>
+                        <div class="cta__bg">
+                            <img src="img/bg-lagi.svg" alt="Background" class="cta__image">
                         </div>
                     </div>
                 </div>
