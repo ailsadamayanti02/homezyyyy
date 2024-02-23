@@ -279,11 +279,6 @@ a {
   font-weight: 500;
   text-decoration: none; }
 
-/* Efek hover */
-a:hover {
-  color: #b592ff;
-  /* Ganti warna saat tautan dihover menjadi ungu */ }
-
 img {
   border: 0; }
 
