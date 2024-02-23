@@ -1,6 +1,9 @@
 .color-dark-100 {
   color: #191a23; }
 
+.color-dark-80 {
+  color: #686a79; }
+
 .color-dark-60 {
   color: #868893; }
 
@@ -205,7 +208,12 @@ Regular: 400
 .body-l {
   font-size: 18px;
   font-weight: 300;
-  line-height: 28px; }
+  line-height: 28px;
+  color: #191a23; }
+
+.body-ll {
+  font-weight: 300;
+  color: #686a79; }
 
 .body-normalb {
   font-size: 16px;
@@ -294,9 +302,6 @@ img {
 .w-inline-block {
   max-width: 100%;
   display: inline-block; }
-
-.w-form {
-  margin: 0 0 15px; }
 
 .w-select {
   background-color: #f3f3f3; }
@@ -893,7 +898,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     display: flex;
     opacity: 1; }
     @media screen and (max-width: 991px) {
@@ -1758,7 +1763,9 @@ img {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 0;
-  padding: 8px 16px; }
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 26px; }
 
 input.w-button {
   -webkit-appearance: button; }
