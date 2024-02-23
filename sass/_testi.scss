@@ -1,0 +1,136 @@
+.testi {
+    @media screen and (max-width: $bp-large) {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+
+    &__heading {
+        @media screen and (max-width: $bp-large) {
+            grid-row-gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        @media screen and (max-width: 767px) {
+            grid-row-gap: 8px;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        grid-column-gap: 32px;
+        grid-row-gap: 24px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 64px;
+        display: flex;
+
+        &--vertical {
+            @media screen and (max-width: 767px) {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__slider {
+        @media screen and (max-width: $bp-medium) {
+            padding-bottom: 76px;
+        }
+
+        height: auto;
+        background-color: transparent;
+        padding-bottom: 92px;
+        padding-bottom: 0;
+
+    }
+
+    &__mask {
+        @media screen and (max-width: $bp-medium) {
+            display: grid;
+            grid-row-gap: 20px;
+            grid-template-columns: 1fr;
+            margin-left: 0;
+            width: 200%;
+        }
+
+        margin-left: -12px;
+        margin-right: -12px;
+        overflow: visible;
+    }
+
+    &__slide {
+        @media screen and (max-width: $bp-medium) {
+            display: flex;
+            justify-content: center;
+            /* Mengatur grid di tengah secara horizontal */
+            align-items: center;
+            padding: 0;
+        }
+
+        width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    &__testi {
+        @media screen and (max-width: $bp-medium) {
+            padding: 24px;
+        }
+
+        border: 1px solid $color-lavender-4;
+        background-color: white;
+        border-radius: 15px;
+        padding: 32px;
+    }
+
+    &__stars {
+        @media screen and (max-width: $bp-medium) {
+            margin-bottom: 24px;
+        }
+
+        grid-column-gap: 12px;
+        color: #f68533;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 32px;
+        display: flex;
+    }
+
+    &__author {
+        @media screen and (max-width: $bp-medium) {
+            margin-top: 24px;
+        }
+
+        grid-column-gap: 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    &__description {
+        margin-top: 6px;
+    }
+
+    &__photo {
+        width: 48px;
+        height: 48px;
+    }
+}

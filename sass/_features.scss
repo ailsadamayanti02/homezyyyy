@@ -1,0 +1,386 @@
+/* SECTION FEATURES */
+
+
+.features {
+
+    @media screen and (max-width: $bp-large) {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+
+    &__heading {
+
+        @media screen and (max-width: $bp-large) {
+            grid-row-gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            grid-row-gap: 8px;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        grid-column-gap: 32px;
+        grid-row-gap: 24px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 64px;
+        display: flex;
+        opacity: 1;
+    }
+
+    &__link {
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        align-items: center;
+        font-weight: 700;
+        display: flex;
+    }
+
+    &__list {}
+
+    &__card {
+
+        @media screen and (max-width: $bp-large) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
+
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        animation: fadeIn .3s ease-in-out forwards;
+        opacity: 0;
+        margin-bottom: 40px;
+    }
+
+    &__property {
+        @media screen and (max-width: $bp-large) {
+            flex-direction: column;
+        }
+
+        border: 1px solid $color-lavender-4;
+        background-color: white;
+        border-radius: 15px;
+        flex-direction: row;
+        align-items: stretch;
+        display: flex;
+        position: relative;
+    }
+
+    &__label {
+        z-index: 1;
+        grid-column-gap: 4px;
+        background-color: $color-secondary-dark-1;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        flex-direction: row;
+        align-items: center;
+        padding: 4px 10px 4px 16px;
+        display: flex;
+        position: absolute;
+        bottom: auto;
+        left: 0%;
+        right: auto;
+        top: 8%;
+        transform: translate(-8px);
+
+        &-triangle {
+            border-top: 7px solid $color-secondary-dark-4;
+            border-left: 7px solid $color-background;
+            position: absolute;
+            top: auto;
+            bottom: 0%;
+            left: 0%;
+            right: auto;
+            transform: translateY(100%);
+        }
+    }
+
+    &__image {
+        @media screen and (max-width: $bp-large) {
+            width: auto;
+            padding-bottom: 50%;
+        }
+
+        width: 43.1%;
+        flex: none;
+        align-self: stretch;
+        position: relative;
+
+        &-thumbnail {
+
+            @media screen and (max-width: $bp-large) {
+                border-radius: 15px
+            }
+
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+    }
+
+    &__box {
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            padding-bottom: 66.67%;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+
+    &__content {
+
+        @media screen and (max-width: $bp-large) {
+            padding-bottom: 24px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            grid-row-gap: 24px;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            padding: 16px;
+        }
+
+        grid-row-gap: 40px;
+        flex-direction: column;
+        flex: 1;
+        align-items: stretch;
+        padding: 24px 32px 32px;
+        display: flex;
+        position: relative;
+    }
+
+    &__detail {
+        flex: 1;
+
+        &-top {
+
+            @media screen and (max-width: $bp-medium) {
+                margin-bottom: 24px;
+            }
+
+            grid-column-gap: 32px;
+            grid-row-gap: 16px;
+            flex-flow: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            display: flex;
+        }
+    }
+
+    &__price {
+        grid-column-gap: 2px;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-bottom: 4px;
+        display: flex;
+    }
+
+    &__agent {
+        grid-column-gap: 32px;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+
+        &-detail {
+            grid-column-gap: 8px;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+        }
+
+        &-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex: none;
+            overflow: hidden;
+        }
+    }
+
+    &__location {
+        grid-column-gap: 8px;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 4px;
+        display: flex;
+    }
+
+    &__description {
+        margin-top: 20px;
+    }
+
+    &__facilities {
+
+        @media screen and (max-width: $bp-large) {
+            justify-content: space-around;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            justify-content: flex-start;
+        }
+
+        grid-column-gap: 48px;
+        grid-row-gap: 24px;
+        background-color: $color-carnation-5;
+        border-radius: 15px;
+        flex-flow: wrap;
+        align-items: center;
+        padding: 20px;
+        display: flex;
+
+
+    }
+
+    &__facility {
+        grid-row-gap: 8px;
+        flex-direction: column;
+        display: flex;
+
+        &-detail {
+            grid-column-gap: 8px;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+        }
+
+        &-text {
+            white-space: pre-wrap;
+            flex-flow: wrap;
+            align-items: flex-end;
+            display: flex;
+
+        }
+    }
+
+    &__grid {
+
+
+        @media screen and (max-width: $bp-large) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+        @media screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
+
+        grid-column-gap: 32px;
+        grid-row-gap: 40px;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+
+
+        &-property {
+            width: 100%;
+            border: 1px solid $color-lavender-4;
+            background-color: white;
+            border-radius: 15px;
+            flex-direction: column;
+            align-items: stretch;
+            display: flex;
+            position: relative;
+        }
+
+        &-thumbnail {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        &-detail {
+            flex: 1;
+        }
+    }
+
+    &__card2 {
+
+        @media screen and (max-width: $bp-small) {
+            padding-bottom: 16px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        grid-row-gap: 16px;
+        flex-direction: column;
+        flex: 1;
+        align-items: stretch;
+        padding: 32px 24px 24px;
+        display: flex;
+        position: relative;
+    }
+
+    &__label2 {
+        z-index: 1;
+        grid-column-gap: 4px;
+        background-color: $color-secondary-dark-1;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        flex-direction: row;
+        align-items: center;
+        padding: 4px 10px 4px 16px;
+        display: flex;
+        position: absolute;
+        bottom: auto;
+        left: 0%;
+        right: auto;
+        top: -8%;
+        transform: translate(-8px);
+
+        &-triangle {
+            border-top: 7px solid $color-secondary-dark-4;
+            border-left: 7px solid $color-background;
+            position: absolute;
+            top: auto;
+            bottom: 0%;
+            left: 0%;
+            right: auto;
+            transform: translateY(100%);
+        }
+    }
+
+    &__facilities2 {
+        grid-column-gap: 24px;
+        grid-row-gap: 12px;
+        border-top: 1px solid $color-lavender-5;
+        flex-flow: wrap;
+        align-items: center;
+        padding-top: 16px;
+        display: flex;
+    }
+
+    &__facility2 {
+        grid-column-gap: 8px;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+    }
+
+
+}

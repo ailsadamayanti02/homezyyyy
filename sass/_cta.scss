@@ -1,0 +1,203 @@
+.cta {
+    @media screen and (max-width: $bp-large) {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding-top: 64px;
+        padding-bottom: 0;
+    }
+
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+
+    &__subscription {
+        @media screen and (max-width: $bp-large) {
+            pFadding: 48px 56px;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            padding: 32px;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            padding: 24px 24px 240px;
+        }
+
+        z-index: 1;
+        border: 2px solid $color-secondary-dark-1;
+        background-color: $color-lavender-2;
+        border-radius: 15px;
+        flex-direction: row;
+        align-items: center;
+        padding: 56px 72px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 414px;
+        flex: none;
+    }
+
+    &__title {
+        max-width: 390px;
+    }
+
+    &__description {
+        margin-top: 8px;
+    }
+
+    &__form {
+        margin-top: 24px;
+
+        &-button {
+            @media screen and (max-width: $bp-small) {
+                grid-row-gap: 8px;
+                flex-direction: column;
+                align-items: stretch;
+                display: flex;
+            }
+
+            position: relative;
+
+
+            &--has {
+                @media screen and (max-width: $bp-small) {
+                    min-height: 0;
+                    padding-right: 16px;
+                }
+
+                min-height: 68px;
+                padding-right: 160px;
+            }
+
+        }
+
+    }
+
+    &__button {
+        @media screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: stretch;
+            display: flex;
+            position: static;
+            top: auto;
+            right: auto;
+            transform: none;
+        }
+
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+
+        &-btn {
+            @media screen and (max-width: $bp-medium) {
+                text-align: center;
+            }
+
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            border: 1px solid $color-secondary-dark-1;
+            background-color: $color-secondary-dark-1;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            display: flex;
+            transition: all .1s;
+            /* Menambahkan efek transisi */
+
+            &:hover {
+                background-color: $color-lavender-1;
+                border-color: transparent;
+            }
+        }
+    }
+
+    &__bg {
+        @media screen and (max-width: $bp-large) {
+            width: 44%;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            width: 36%;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            width: auto;
+            height: 350px;
+            top: auto;
+            bottom: -16px;
+            left: -92px;
+            right: auto;
+        }
+
+        z-index: -2;
+        width: 51.25%;
+        position: absolute;
+        top: -150px;
+        bottom: -22px;
+        left: auto;
+        right: 0%;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: auto;
+        height: 100%;
+        object-position: 0% 100%;
+        transform-style: preserve-3d;
+        transform: rotateX(0)rotateY(180deg)rotate(0);
+    }
+
+}
+
+
+.w-input {
+    width: 100%;
+    height: 38px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    display: block;
+}
+
+.text-field {
+    height: 52px;
+    border: 1px solid $color-secondary-dark-5;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 0;
+    padding: 8px 16px;
+}
+
+input.w-button {
+    -webkit-appearance: button;
+}
+
+.w-h {
+    color: white;
+}
+
+.color-lavender-40 {
+    color: $color-lavender-4;
+}

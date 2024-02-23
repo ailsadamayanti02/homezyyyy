@@ -1,0 +1,290 @@
+.navbar {
+    @media screen and (max-width: $bp-large) {
+        background-color: $color-background;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        height: 72px;
+    }
+
+    width: 100%;
+    height: 100px;
+    background-color: $color-background;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+
+    &.active {
+        @media only screen and (max-width: $bp-large) {
+            background-color: #f7f2ff;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            background-color:#f7f2ff;
+        }
+    }
+
+    &--nav {
+        z-index: 1000;
+    }
+
+    &__content-wrap {
+        @media screen and (max-width: $bp-large) {
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        align-items: center;
+        display: flex;
+    }
+
+    &__brand-wrap {
+        @media screen and (max-width: $bp-large) {
+            padding-left: 0;
+        }
+
+        flex-direction: row;
+        flex: 1;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+
+    }
+
+    &__brand {
+        padding-left: 0;
+
+        &--w {
+            float: left;
+            color: #333;
+            text-decoration: none;
+            position: relative;
+        }
+    }
+
+    &__brand-image {
+        @media screen and (max-width: $bp-medium) {
+            height: 32px;
+        }
+
+        width: auto;
+        height: 40px;
+        max-width: none;
+    }
+
+    &__link {
+
+        @media screen and (max-width: $bp-large) {
+            width: 100%;
+            border-bottom: 1px solid $color-lavender-4;
+            text-align: left;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        grid-column-gap: 8px;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        display: flex;
+    }
+
+    &__menu {
+        @media screen and (max-width: $bp-large) {
+            z-index: 0;
+            max-height: 100vh;
+            min-height: 100vh;
+            background-color: $color-lavender-5;
+            flex-direction: column;
+            margin-top: -100px;
+            padding: 100px 40px 48px;
+            display: block;
+            overflow: auto;
+        }
+
+        grid-column-gap: 64px;
+        grid-row-gap: 64px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &--w {
+            @media screen and (max-width: $bp-large) {
+                display: none;
+            }
+
+            float: right;
+            position: relative;
+        }
+
+    }
+
+
+    &__cta-wrap {
+        @media screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-top: 56px;
+            display: flex;
+        }
+
+        grid-column-gap: 24px;
+        flex-direction: row;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+
+    }
+
+    &__button {
+
+        @media screen and (max-width: $bp-medium) {
+            display: none;
+            /* Menyembunyikan tombol saat lebar layar 991px atau kurang */
+
+        }
+
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        border: 1px solid $color-secondary-dark-1;
+        background-color: $color-secondary-dark-1;
+        color: white;
+        text-align: center;
+        border-radius: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 16px 32px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        display: flex;
+        transition: all .1s;
+        /* Menambahkan efek transisi */
+
+        &:hover {
+            color: white;
+            background-color: $color-lavender-1;
+            border-color: transparent;
+        }
+
+        &-outline {
+            color: $color-secondary-dark-1;
+            background-color: transparent;
+        }
+
+    }
+
+    &__menus {
+
+        &-w {
+
+            @media screen and (max-width: $bp-large) {
+                display: block;
+            }
+
+            float: right;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 18px;
+            font-size: 24px;
+            display: none;
+            position: relative;
+
+        }
+
+        @media screen and (max-width: 991px) {
+            color: $color-secondary-dark-1;
+            background-color: transparent;
+            padding: 8px;
+        }
+    }
+
+
+
+    &__overlay {
+        width: 100%;
+        height: 8939.2px;
+        display: none;
+        /* awalnya tidak terlihat */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .navbar__overlay.active {
+        @media only screen and (max-width: $bp-large) {
+            display: block;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+        }
+    }
+
+
+
+
+    &__icon {
+
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+
+    }
+
+    &__close {
+        @media screen and (max-width: 991px) {
+            width: 24px;
+            height: 24px;
+            color: $color-secondary-dark-1; /* Anda dapat mengganti nilai warna sesuai kebutuhan Anda */
+            display: none;
+        }
+    }
+
+    &__menu2 {
+        @media screen and (max-width: $bp-large) {
+            z-index: 0;
+            max-height: 100vh;
+            min-height: 100vh;
+            background-color: $color-lavender-5;
+            flex-direction: column;
+            margin-top: -72px;
+            padding: 72px 20px 24px;
+            display: block;
+            overflow: auto;
+        }
+
+        grid-column-gap: 64px;
+        grid-row-gap: 64px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &--w {
+            position: relative;
+        }
+    }
+
+}

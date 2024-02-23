@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Link to Syne font -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to Hanken Grotesk font -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/icon.svg">
+    <title>Homezy</title>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuIcon = document.querySelector(".navbar__icon");
+            var overlay = document.querySelector(".navbar__overlay");
+            var closeIcon = document.querySelector(".navbar__close");
+            var navbar = document.querySelector(".navbar");
+    
+            menuIcon.addEventListener("click", function () {
+                overlay.classList.toggle("active");
+                navbar.classList.toggle("active"); // Menambahkan kelas active pada navbar saat overlay aktif
+                menuIcon.style.display = "none";
+                closeIcon.style.display = "block";
+            });
+    
+            closeIcon.addEventListener("click", function () {
+                overlay.classList.toggle("active");
+                navbar.classList.toggle("active"); // Menghapus kelas active pada navbar saat overlay tidak aktif
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "block";
+            });
+    
+            window.addEventListener("resize", function () {
+                if (window.innerWidth > 768) {
+                    overlay.classList.remove("active");
+                    navbar.classList.remove("active"); // Menghapus kelas active pada navbar saat lebar layar lebih besar dari 768px
+                    menuIcon.style.display = "block";
+                    closeIcon.style.display = "none";
+                }
+            });
+        });
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar--nav">
+        <div class="container">
+            <div class="navbar__content-wrap">
+                <div class="navbar__brand-wrap">
+                    <a href="/" class="navbar__brand navbar__brand--w">
+                        <img src="img/brand.svg" alt="brand" class="navbar__brand-image">
+                    </a>
+                </div>
+                <nav class="navbar__menu navbar__menu--w">
+                    <a href="#" class="navbar__link w-inline-block">
+                        <div class="body-l">Home</div>
+                    </a>
+                    <a href="#" class="navbar__link w-inline-block">
+                        <div class="body-l">Properties</div>
+                    </a>
+                    <a href="#" class="navbar__link w-inline-block">
+                        <div class="body-l">Agents</div>
+                    </a>
+                </nav>
+                <div class="navbar__cta-wrap">
+                    <a href="#" class="navbar__button navbar__button-outline w-button">Contact Us</a>
+                </div>
+                <div class="navbar__menus navbar__menus-w">
+                    <div class="navbar__icon w-embed">
+                        <img src="img/menu-icon.svg" alt="menu">
+                    </div>
+                    <div class="navbar__close w-embed">
+                        <img src="img/close.svg" alt="close" class="svg__icon--24">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__overlay">
+            <nav class="navbar__menu2 navbar__menu2--w">
+                <a href="#" class="navbar__link w-inline-block">
+                    <div class="body-l mobile-text-xl-medium ">Home</div>
+                </a>
+                <a href="#" class="navbar__link w-inline-block">
+                    <div class="body-l mobile-text-xl-medium ">Properties</div>
+                </a>
+                <a href="#" class="navbar__link w-inline-block">
+                    <div class="body-l mobile-text-xl-medium ">Agents</div>
+                </a>
+                <div class="navbar__cta-wrap mobile-cta-wrap">
+                    <a href="#" class="button button-outline w-button">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__title">
+                    <h1 class="color-dark-100">We help people to realize their dream property</h1>
+                </div>
+                <div class="hero__description">
+                    <p class="body-xl">
+                        We are creative people who provide the best way to you who want to have a new comfortable
+                        and suitable place to live
+                    </p>
+                </div>
+                <div class="hero__form w-form">
+                    <form class="hero__browse">
+                        <div class="hero__item">
+                            <div class="hero__icon">
+                                <div class="svg__icon--20">
+                                    <img src="img/loc-icon.svg" alt="Icon Lokasi">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="body-s">Location</div>
+                                <select class="hero__select w-select">
+                                    <option value="California, US">California, US</option>
+                                    <option value="California, US">London, UK</option>
+                                    <option value="California, US">Rome, Italia</option>
+                                    <option value="California, US">Paris, France</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="hero__item">
+                            <div class="hero__icon">
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/dolar-icon.svg" alt="Icon Lokasi">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="body-s">Price</div>
+                                <select class="hero__select w-select">
+                                    <option value="California, US">$1500-$2500</option>
+                                    <option value="California, US">$2500-$5000</option>
+                                    <option value="California, US">$5000-$8000</option>
+                                    <option value="California, US">$8000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="hero__item">
+                            <div class="hero__icon">
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/apart-icon.svg" alt="Icon Lokasi">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="body-s">Type of Property</div>
+                                <select class="hero__select w-select">
+                                    <option value="California, US">Apartment</option>
+                                    <option value="California, US">Studio</option>
+                                    <option value="California, US">Office</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hero__cta">
+                            <a href="#" class="hero__button hero__button-l w-button">Browse</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="hero__ilus">
+                    <div class="hero__ilus-item-3-wrap">
+                        <img src="img/home7.webp" alt="Home 3" class="image__full image__full--height">
+                    </div>
+                    <div class="hero__ilus-item-2-wrap">
+                        <img src="img/home2.webp" alt="Home 1" class="image__full image__full--height">
+                    </div>
+                    <div class="hero__ilus-item-1-wrap">
+                        <img src="img/item1.webp" alt="Home 1" class="image__full image__full--height">
+                    </div>
+                </div>
+            </div>
+            <div class="hero__bg">
+                <img src="img/bgbgbg.svg" alt="Background Image" class="image__full image__full--width">
+            </div>
+    </section>
+
+
+    <!--FEATURES-->
+
+    <section class="features">
+        <div class="container">
+            <div class="features__heading">
+                <h2>Featured Listings</h2>
+                <div>
+                    <a href="#" class="features__link w-inline-block">
+                        <div class="body-lb">
+                            Browse All Featured
+                        </div>
+                        <div class="svg__icon-block w-embed">
+                            <img src="img/arrow-right-icon.svg" alt="icon row">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="features__list">
+                <div class="features__card">
+                    <div class="features__property">
+                        <div class="features__label">
+                            <div class="svg__icon--16 w-embed">
+                                <img src="img/featured-icon.svg" alt="Deskripsi ikon">
+                            </div>
+                            <div class="body-s">FEATURED</div>
+                            <div class="features__label-triangle"></div>
+                        </div>
+                        <a href="#" class="features__image features__box w-inline-block">
+                            <img src="img/home9.png" alt="home 9"
+                                class="image__full-absolute features__image-thumbnail">
+                        </a>
+                        <div class="features__content">
+                            <div class="features__detail">
+                                <div class="features__detail-top">
+                                    <div class="features__price">
+                                        <h3>$2,095</h3>
+                                        <div class="body-l">/month</div>
+                                    </div>
+                                    <div class="features__agent">
+                                        <div class="features__agent-detail">
+                                            <div class="features__agent-photo">
+                                                <img src="img/personbaru.png" alt="Person Cova"
+                                                    class="image__full-cover">
+                                            </div>
+                                            <a href="#" class="w-inline-block">
+                                                <div class="body-lb">Edwin Martins</div>
+                                                <div>Property Advisor</div>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="w-inline-block">
+                                            <div class="svg__icon--16 w-embed">
+                                                <img src="img/Phone-icon.svg" alt="Deskripsi ikon">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4>COVA Home Realty</h4>
+                                <div class="features__location">
+                                    <div class="svg__icon--24 w-embed">
+                                        <img src="img/location-icon.svg" alt="location">
+                                    </div>
+                                    <div class="body-l mobile-text-l">
+                                        2699 Green Valley, Highland Lake, FL
+                                    </div>
+                                </div>
+                                <div class="features__description">
+                                    <div class="body-l">
+                                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                        Velit
+                                        officia consequat duis enim velit mollit. Exercitation
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features__facilities">
+                                <div class="features__facility">
+                                    <div>Bedrooms</div>
+                                    <div class="features__facility-detail">
+                                        <div class="svg__icon--24 w-embed">
+                                            <img src="img/bed-icon.svg" alt="bed">
+                                        </div>
+                                        <div class="body-r">4</div>
+                                    </div>
+                                </div>
+                                <div class="features__facility">
+                                    <div>Bathroom</div>
+                                    <div class="features__facility-detail">
+                                        <div class="svg__icon--24 w-embed">
+                                            <img src="img/icon-bath.svg" alt="bath">
+                                        </div>
+                                        <div class="body-r">4</div>
+                                    </div>
+                                </div>
+                                <div class="features__facility">
+                                    <div>Square Area</div>
+                                    <div class="features__facility-detail">
+                                        <div class="svg__icon--24 w-embed">
+                                            <img src="img/surface-area-icon.svg" alt="bed">
+                                        </div>
+                                        <div class="body-r">6x8 m2</div>
+                                    </div>
+                                </div>
+                                <div class="features__facility">
+                                    <div>Environment</div>
+                                    <div class="features__facility-detail">
+                                        <div class="svg__icon--24 w-embed">
+                                            <img src="img/repair-icon.svg" alt="bed">
+                                        </div>
+                                        <div class="body-r">Modern Loft</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features__grid ">
+                <div class="features__grid-property">
+                    <a href="#" class="box-ratio-1-2 box-ratio-2-3 w-inline-block">
+                        <img src="img/homefea.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
+                    </a>
+                    <div class="features__card2">
+                        <div class="features__label2">
+                            <div class="svg__icon--16 w-embed">
+                                <img src="img/featured-icon.svg" alt="home1">
+                            </div>
+                            <div class="body-s">FEATURED</div>
+                            <div class="features__label-triangle"></div>
+                        </div>
+                        <div class="features__grid-detail">
+                            <div class="features__price">
+                                <h4>$15,000</h4>
+                                <div>/month</div>
+                            </div>
+                            <a href="#" class=" w-inline-block">
+                                <h5>Beach Pros Realty Inc.</h5>
+                            </a>
+                            <div class="features__description">
+                                <div>37 Ambleside Gardens, Ilford, IG4 5HH</div>
+                            </div>
+                        </div>
+                        <div class="features__facilities2">
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 w-embed">
+                                    <img src="img/bed-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Beds</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 w-embed">
+                                    <img src="img/bath2-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Baths</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 w-embed">
+                                    <img src="img/surface-area-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">5x7 m2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD 2-->
+
+                <div class="features__grid-property">
+                    <a href="#" class="box-ratio-1-2 box-ratio-2-3 w-inline-block">
+                        <img src="img/homefea.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
+                    </a>
+                    <div class="features__card2">
+                        <div class="features__label2">
+                            <div class="svg__icon--16 w-embed">
+                                <img src="img/featured-icon.svg" alt="home1">
+                            </div>
+                            <div class="body-s">FEATURED</div>
+                            <div class="features__label-triangle"></div>
+                        </div>
+                        <div class="features__grid-detail">
+                            <div class="features__price">
+                                <h4>$15,000</h4>
+                                <div>/month</div>
+                            </div>
+                            <a href="#" class=" w-inline-block">
+                                <h5>Beach Pros Realty Inc.</h5>
+                            </a>
+                            <div class="features__description">
+                                <div>37 Ambleside Gardens, Ilford, IG4 5HH</div>
+                            </div>
+                        </div>
+                        <div class="features__facilities2">
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/bed-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Beds</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/bath2-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Baths</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/surface-area-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">5x7 m2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD 3-->
+
+                <div class="features__grid-property">
+                    <a href="#" class="box-ratio-1-2 box-ratio-2-3 w-inline-block">
+                        <img src="img/homefea.png" alt="home1" class="image__full-absolute features__grid-thumbnail">
+                    </a>
+                    <div class="features__card2">
+                        <div class="features__label2">
+                            <div class="svg__icon--16 w-embed">
+                                <img src="img/featured-icon.svg" alt="home1">
+                            </div>
+                            <div class="body-s">FEATURED</div>
+                            <div class="features__label-triangle"></div>
+                        </div>
+                        <div class="features__grid-detail">
+                            <div class="features__price">
+                                <h4>$15,000</h4>
+                                <div>/month</div>
+                            </div>
+                            <a href="#" class=" w-inline-block">
+                                <h5>Beach Pros Realty Inc.</h5>
+                            </a>
+                            <div class="features__description">
+                                <div>37 Ambleside Gardens, Ilford, IG4 5HH</div>
+                            </div>
+                        </div>
+                        <div class="features__facilities2">
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/bed-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Beds</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/bath2-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">3</div>
+                                    <div class="body-sm"> Baths</div>
+                                </div>
+                            </div>
+                            <div class="features__facility2">
+                                <div class="svg__icon--24 color-dark-100 w-embed">
+                                    <img src="img/surface-area-icon.svg" alt="home1">
+                                </div>
+                                <div class="features__facility-text">
+                                    <div class="body-sm">5x7 m2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Bneefit-->
+
+    <section class="benefit">
+        <div class="container">
+            <div class="benefit__heading mobile-large-gap">
+                <div class="benefit__heading-title">
+                    <h2>Comfort Is Our Top Priority For You</h2>
+                </div>
+                <div class="benefit__sub">
+                    <div class="body-l">
+                        We guarantee that the products we sell will make our customers happy because we are very
+                        concerned about our customer satisfaction
+                    </div>
+                </div>
+            </div>
+            <div class="benefit__slide w__slider">
+                <div class="benefit__mask w__slider-mask">
+                    <div class="benefit__benefit w__slider-slide">
+                        <div class="benefit__card">
+                            <div class="benefit__icon">
+                                <div class="svg__icon--48 w-embed">
+                                    <img src="img/coin-icon.svg" alt="coin">
+                                </div>
+                            </div>
+                            <h5>Affordable Price</h5>
+                            <div class="benefit__description">
+                                <div>We provide the best for you. The Price we offer accordance with the quality we
+                                    provide</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit__benefit w__slider-slide">
+                        <div class="benefit__card">
+                            <div class="benefit__icon">
+                                <div class="svg__icon--48 w-embed">
+                                    <img src="img/jempol-icon.svg" alt="coin">
+                                </div>
+                            </div>
+                            <h5>Clear Legality</h5>
+                            <div class="benefit__description">
+                                <div>Put your trust in us. We are a legal entity with official legality in the
+                                    relevant
+                                    government</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit__benefit w__slider-slide">
+                        <div class="benefit__card">
+                            <div class="benefit__icon">
+                                <div class="svg__icon--48 w-embed">
+                                    <img src="img/people-icon.svg" alt="coin">
+                                </div>
+                            </div>
+                            <h5>Experienced Agent</h5>
+                            <div class="benefit__description">
+                                <div>We always work wih agents in their fields so that we can provide the best
+                                    quality
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CATEGORIES-->
+    <section class="categories">
+        <div class="container">
+            <div class="categories__heading">
+                <h2>Featured Categories</h2>
+                <div>
+                    <a href="#" class="categories__link w-inline-block">
+                        <div class="body-lb">
+                            Browse All Categories
+                        </div>
+                        <div class="svg__icon-block w-embed">
+                            <img src="img/arrow-right-icon.svg" alt="icon row">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="categories__grid">
+                <div class="categories__category">
+                    <div class="categories__detail">
+                        <div class="categories__icon">
+                            <img src="img/stud-icon.svg" alt="icon row" class="image__full">
+                        </div>
+                        <div>
+                            <a href="#" class="w-inline-block">
+                                <h5>Studio</h5>
+                            </a>
+                            <div class="categories__description">
+                                <div class="body-l">100+ listings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="categories__link w-inline-block">
+                        <div>View</div>
+                        <div class="svg__icon--20 w-embed">
+                            <img src="img/send-icon.svg" alt="send">
+                        </div>
+                    </a>
+                </div>
+                <div class="categories__category">
+                    <div class="categories__detail">
+                        <div class="categories__icon">
+                            <img src="img/apart2.svg" alt="icon row" class="image__full">
+                        </div>
+                        <div>
+                            <a href="#" class="w-inline-block">
+                                <h5>Apartment</h5>
+                            </a>
+                            <div class="categories__description">
+                                <div class="body-l">100+ listings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="categories__link w-inline-block">
+                        <div>View</div>
+                        <div class="svg__icon--20 w-embed">
+                            <img src="img/send-icon.svg" alt="send">
+                        </div>
+                    </a>
+                </div>
+                <div class="categories__category">
+                    <div class="categories__detail">
+                        <div class="categories__icon">
+                            <img src="img/office-icon.svg" alt="icon row" class="image__full">
+                        </div>
+                        <div>
+                            <a href="#" class="w-inline-block">
+                                <h5>Studio</h5>
+                            </a>
+                            <div class="categories__description">
+                                <div class="text-l card-category-name">100+ listings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="categories__link w-inline-block">
+                        <div>View</div>
+                        <div class="svg__icon--20 w-embed">
+                            <img src="img/send-icon.svg" alt="send">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CITIES-->
+    <section class="cities">
+        <div class="container">
+            <div class="cities__heading">
+                <h2>Explore Cities</h2>
+                <div>
+                    <a href="#" class="cities__link w-inline-block">
+                        <div class="body-lb">
+                            Browse All Cities
+                        </div>
+                        <div class="svg__icon-block w-embed">
+                            <img src="img/arrow-right-icon.svg" alt="icon row">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="cities__slide w__slider">
+                <div class="cities__mask w__slider-mask">
+                    <div class="cities__eksplor w__slider-slide">
+                        <div class="cities__city">
+                            <a href="#" class="box-ratio-1-1 w-inline-block">
+                                <img src="img/city1.svg" alt="Pasaneda, Oklahoma"
+                                    class="image__full-absolute cities__thumbnail">
+                            </a>
+                            <div class="cities__content">
+                                <a href="#" class="w-inline-block">
+                                    <h5>Pasadena, Oklahoma</h5>
+                                </a>
+                                <div class="cities__description">
+                                    <div class="svg__icon--24 color-dark-100 w-embed">
+                                        <img src="img/house-icon.svg" alt="Icon House">
+                                    </div>
+                                    <div class="body-l">100+ listings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cities__eksplor w__slider-slide">
+                        <div class="cities__city">
+                            <a href="#" class="box-ratio-1-1 w-inline-block">
+                                <img src="img/city2.svg" alt="Pasaneda, Oklahoma"
+                                    class="image__full-absolute cities__thumbnail">
+                            </a>
+                            <div class="cities__content">
+                                <a href="#" class="w-inline-block">
+                                    <h5>Lafayette, California</h5>
+                                </a>
+                                <div class="cities__description">
+                                    <div class="svg__icon--24 color-dark-100 w-embed">
+                                        <img src="img/house-icon.svg" alt="Icon House">
+                                    </div>
+                                    <div class="body-l">100+ listings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cities__eksplor w__slider-slide">
+                        <div class="cities__city">
+                            <a href="#" class="box-ratio-1-1 w-inline-block">
+                                <img src="img/city3.svg" alt="Pasaneda, Oklahoma"
+                                    class="image__full-absolute cities__thumbnail">
+                            </a>
+                            <div class="cities__content">
+                                <a href="#" class="w-inline-block">
+                                    <h5>New York</h5>
+                                </a>
+                                <div class="cities__description">
+                                    <div class="svg__icon--24 color-dark-100 w-embed">
+                                        <img src="img/house-icon.svg" alt="Icon House">
+                                    </div>
+                                    <div class="body-l">100+ listings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--AGENTS-->
+    <section class="agent">
+        <div class="container">
+            <div class="agent__heading">
+                <h2>Meet Our Agents</h2>
+                <div>
+                    <a href="#" class="agent__link w-inline-block">
+                        <div class="body-lb">
+                            Browse All Agents
+                        </div>
+                        <div class="svg__icon-block w-embed">
+                            <img src="img/arrow-right-icon.svg" alt="icon row">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="agent__grid">
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Edwin Martins</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Property Advisor</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/personbaru.png" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Robert Fox</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Leasing Agent</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/orang2.svg" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Jane Cooper</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Property Consultant</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/orang3.svg" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Guy Hawkins</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Property Advisor</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/orang4.svg" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Albert Flores</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Property Advisor</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/orang6.svg" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+
+                <div class="agent__card">
+                    <div>
+                        <a href="#" class="agent__name w-inline-block">
+                            <h5>Albert Flores</h5>
+                        </a>
+                        <div class="agent__description">
+                            <div class="body-l">Property Advisor</div>
+                        </div>
+                        <div class="agent__sosial">
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/call-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/ig-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/fc-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                            <a href="#" class="svg__icon-link w-inline-block">
+                                <div class="svg__icon--16 w-embed">
+                                    <img src="img/tw-icon.svg" alt="call icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="agent__photo w-inline-block">
+                        <img src="img/orang6.svg" alt="call icon" class="image__full-cover">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--TESTI-->
+    <section class="testi">
+        <div class="container">
+            <div class="testi__heading testi__heading--vertical">
+                <h2>Kind Words From Our Customers</h2>
+            </div>
+            <div class="testi__slider w__slider">
+                <div class="testi__mask w__slider-mask">
+                    <div class="testi__slide w__slider-slide">
+                        <div class="testi__testi">
+                            <div class="testi__stars">
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon" class="image__full-cover">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="body-xl">
+                                    "Your company is truly upstanding and is behind its product 100%. It's the
+                                    perfect
+                                    solution for our business. It has really helped our business"
+                                </div>
+                            </div>
+                            <div class="testi__author">
+                                <div>
+
+                                    <h5>Brooklyn Simmons</h5>
+
+                                    <div class="testi__description">
+                                        <div class="body-l">
+                                            CEO of Asana
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testi__photo">
+                                    <img src="img/n-icon.svg" alt="testi photo" class="image__full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi__slide w__slider-slide">
+                        <div class="testi__testi">
+                            <div class="testi__stars">
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon" class="image__full-cover">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                                <div class="svg__icon--20 w-embed">
+                                    <img src="img/star-icon.svg" alt="star icon">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="body-xl">
+                                    "Your company is truly upstanding and is behind its product 100%. It's the
+                                    perfect
+                                    solution for our business. It has really helped our business"
+                                </div>
+                            </div>
+                            <div class="testi__author">
+                                <div>
+
+                                    <h5>Brooklyn Simmons</h5>
+
+                                    <div class="testi__description">
+                                        <div class="body-l">
+                                            CEO of Asana
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testi__photo">
+                                    <img src="img/n-icon.svg" alt="testi photo" class="image__full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CTA-->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__subscription">
+                <div class="cta__content">
+                    <div class="cta__title">
+                        <h2 class="w-h">Subscribe To Our Newsletter</h2>
+                    </div>
+                    <div class="cta__description">
+                        <div class="body-l color-lavender-40">
+                            Join our newsletter to stay up to date on features and releases.
+                        </div>
+                    </div>
+                    <div class="cta__form">
+                        <div class="w-form">
+                            <form>
+                                <div class="cta__form-button">
+                                    <input class="text-field cta__form-button--has w-input" type="email"
+                                        name="Email-Addres" placeholder="Enter Your Email Addres" required>
+                                    <div class="cta__button">
+                                        <input type="submit" class="cta__button-btn w-button" value="Subscribe">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="cta__bg">
+                                <img src="img/bg-lagi.svg" alt="Background" class="cta__image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__brand-logo">
+                        <img src="img/logo.svg" alt="Logo" class="image__full image__full--width">
+                    </div>
+                    <div class="footer__description">
+                        <div class="color-dark-100">
+                            We are creative people who provide the best way to you who want to have a new
+                            confortable
+                            and suitable place to live
+                        </div>
+                    </div>
+                    <div class="footer__sosials">
+                        <a href="#" class="svg__icon-link svg__icon--32 w-inline-block">
+                            <div class="svg__icon--16x w-embed">
+                                <img src="img/call-icon.svg" alt="call icon">
+                            </div>
+                        </a>
+                        <a href="#" class="svg__icon-link svg__icon--32 w-inline-block">
+                            <div class="svg__icon--16x w-embed">
+                                <img src="img/ig-icon.svg" alt="call icon">
+                            </div>
+                        </a>
+                        <a href="#" class="svg__icon-link svg__icon--32 w-inline-block">
+                            <div class="svg__icon--16x w-embed">
+                                <img src="img/fc-icon.svg" alt="call icon">
+                            </div>
+                        </a>
+                        <a href="#" class="svg__icon-link svg__icon--32 w-inline-block">
+                            <div class="svg__icon--16x w-embed">
+                                <img src="img/tw-icon.svg" alt="call icon">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__pages">
+                    <div class="footer__pages-menu">
+                        <div>
+                            <div>Pages</div>
+                        </div>
+                        <div class="footer__pg">
+                            <div class="footer__pages-links">
+                                <a href="#" class="w--current">Home V1</a>
+                                <a href="#">Home V2</a>
+                                <a href="#">Search Properties V1</a>
+                                <a href="#">Search Properties V2</a>
+                                <a href="#">Property Details V1</a>
+                                <a href="#">Property Details V2</a>
+                                <a href="#">Agent List V1</a>
+                                <a href="#">Agent List V2</a>
+                            </div>
+                            <div class="footer__pages-links">
+                                <a href="#">Agent Details V1</a>
+                                <a href="#">Agent Details V2</a>
+                                <a href="#">About Us V1</a>
+                                <a href="#">About Us V2</a>
+                                <a href="#">Contact Us V1</a>
+                                <a href="#">Contact Us V2</a>
+                                <a href="#">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__pages-menu">
+                        <div>
+                            <div>Utility Pages</div>
+                        </div>
+                        <div class="footer__pg">
+                            <div class="footer__pages-links">
+                                <a href="#">Sign In</a>
+                                <a href="#">Sign Up</a>
+                                <a href="#">Forgot Password</a>
+                                <a href="#">Reset Password</a>
+                                <a href="#">404 Error Page</a>
+                                <a href="#">Style Guides</a>
+                                <a href="#">Licenses</a>
+                                <a href="#">Change Log</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="color-dark-60">
+                    ©2023 Designed by
+                    <a href="#">
+                        <strong>Pixelflow</strong>
+                    </a>
+                    - Powered by
+                    <a href="#">
+                        <strong>Webflow</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
