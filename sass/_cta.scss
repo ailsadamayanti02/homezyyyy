@@ -203,3 +203,7 @@ input.w-button {
 .color-lavender-40 {
     color: $color-lavender-4;
 }
+
+.cta__form-button input[type="email"]::placeholder {
+    color: $color-secondary-dark-4; /* Atur warna abu-abu yang diinginkan */
+  }
