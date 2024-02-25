@@ -7,6 +7,9 @@
 .color-dark-60 {
   color: #868893; }
 
+.color-dark-40 {
+  color: #b7b8c1; }
+
 * {
   box-sizing: border-box; }
 
@@ -1082,7 +1085,7 @@ img {
       display: flex; }
   .features__grid {
     grid-column-gap: 32px;
-    grid-row-gap: 40px;
+    grid-row-gap: 32px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
     display: grid; }
@@ -1195,12 +1198,12 @@ img {
     background-color: transparent;
     padding-bottom: 92px;
     padding-bottom: 0; }
-    @media screen and (max-width: 767px) {
-      .benefit__slide {
-        padding-bottom: 68px; } }
     @media screen and (max-width: 991px) {
       .benefit__slide {
         padding-bottom: 92px; } }
+    @media screen and (max-width: 767px) {
+      .benefit__slide {
+        padding-bottom: 64px; } }
   .benefit__mask {
     height: auto;
     margin-left: -16px;
@@ -1775,6 +1778,10 @@ input.w-button {
 
 .color-lavender-40 {
   color: #e2d4ff; }
+
+.cta__form-button input[type="email"]::placeholder {
+  color: #b7b8c1;
+  /* Atur warna abu-abu yang diinginkan */ }
 
 .footer {
   padding-top: 64px;
