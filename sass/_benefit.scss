@@ -40,12 +40,12 @@
 
     &__slide {
 
-        @media screen and (max-width: 767px) {
-            padding-bottom: 68px;
-        }
-
         @media screen and (max-width: $bp-large) {
             padding-bottom: 92px;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            padding-bottom: 64px;
         }
 
         height: auto;
